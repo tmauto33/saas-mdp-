@@ -46,8 +46,12 @@
 
     <script>
         lucide.createIcons();
-        if (localStorage.getItem('ox_authenticated') === 'true') window.location.href = '../app/app.html';
+        
+        // CORRECTION DU CHEMIN : 
+        // Comme app.html est au même niveau que index.html sur ton GitHub, on retire les dossiers
+        if (localStorage.getItem('ox_authenticated') === 'true') {
+            window.location.href = 'app.html';
+        }
     </script>
 </body>
-
 </html>
