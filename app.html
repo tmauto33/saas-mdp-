@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <script>
+    // Si l'utilisateur n'a PAS le badge, on l'expulse vers le paywall
+    if (localStorage.getItem('ox_authenticated') !== 'true') {
+        window.location.href = 'index.html';
+    }
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,4 +143,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
