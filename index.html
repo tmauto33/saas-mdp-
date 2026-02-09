@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OX PRO - Tarifs</title>
+    <link rel="stylesheet" href="vitrine.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="paywall-body">
+    <header class="main-header">
+        <div class="logo"><i data-lucide="zap"></i> OX PRO</div>
+        <nav>
+            <a href="#">Abonnements</a>
+            <a href="#">Assistance</a>
+            <button class="btn-nav-login" onclick="window.location.href='login.html'">Connexion</button>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>Votre rentabilité sans limites.</h1>
+        <p class="subtitle">Accédez à l'expertise IA et l'historique illimité.</p>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div class="badge-card">Essai Découverte</div>
+                <h2>0€ <small>pendant 7 jours</small></h2>
+                <ul>
+                    <li><i data-lucide="check"></i> 1er dossier offert</li>
+                    <li><i data-lucide="check"></i> Rapport PDF inclus</li>
+                </ul>
+                <button class="btn-pay pink" onclick="window.location.href='login.html'">Essayer</button>
+            </div>
+
+            <div class="price-card pro">
+                <div class="badge-card blue">Professionnel</div>
+                <h2>29€ <small>par mois</small></h2>
+                <ul>
+                    <li><i data-lucide="check"></i> Historique illimité</li>
+                    <li><i data-lucide="check"></i> Expertise IA avancée</li>
+                </ul>
+                <button class="btn-pay green" onclick="window.location.href='login.html'">S'abonner</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+        if (localStorage.getItem('ox_authenticated') === 'true') window.location.href = '../app/app.html';
+    </script>
+</body>
+</html>
